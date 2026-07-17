@@ -7,15 +7,11 @@ class Solution {
 
             int mid = low + (high - low) / 2;
 
-            if (mid % 2 == 1) {
-                mid--;
-            }
+            if (mid % 2 == 1) mid--;
 
-            if (nums[mid] == nums[mid + 1]) {
-                low = mid + 2;
-            } else {
-                high = mid;
-            }
+
+            if (nums[mid] == nums[mid + 1]) low = mid + 2;
+            else high = mid;
         }
 
         return nums[low];
