@@ -25,17 +25,13 @@ class Solution {
     //     return false;
     // }
 
-    public boolean solve(String s, int idx,
-                         Set<String> set,
-                         int[] dp) {
+    public boolean solve(String s, int idx, Set<String> set, int[] dp) {
 
         if (idx == s.length()) {
             return true;
         }
 
-        if (dp[idx] != -1) {
-            return dp[idx] == 1;
-        }
+        if (dp[idx] != -1) return dp[idx] == 1;
 
         for (int i = idx; i < s.length(); i++) {
 
