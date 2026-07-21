@@ -6,7 +6,7 @@ class Solution {
             high = Math.max(high, num);
         }
         
-        int ans = 0;
+        // int ans = 0;
         while(low <= high){
             int mid = low + (high - low) / 2;
 
@@ -16,12 +16,13 @@ class Solution {
             }
 
             if(sum <= threshold){
-                ans = mid;
+                // ans = mid;
                 high = mid - 1;
             }
             else low = mid + 1;
         }
 
-        return ans;
+        // return ans;
+        return low;
     }
 }
